@@ -1,9 +1,12 @@
 package com.example.bottomnav;
 
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -44,19 +47,21 @@ public class Detail extends AppCompatActivity {
 //        tvDescription.setText(detail);
 //        photo.setImageResource(foto);
 
+        ActionBar actionBar = getSupportActionBar();
+        actionBar.setTitle(heroan.getName());
+//        actionBar.setLogo(R.drawable.ic_baseline_arrow_back_24);
+//        actionBar.setDisplayUseLogoEnabled(true);
+//        actionBar.setDisplayShowHomeEnabled(true);
+        actionBar.setDisplayHomeAsUpEnabled(true);
 
-        setActionBarTitle(heroan.getName());
 
 
     }
 
-    public void btnBack(View view) {
-        Intent goBack = new Intent(Detail.this,MainActivity.class);
-        goBack.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-        startActivity(goBack);
-    }
 
-    private void setActionBarTitle(String title){
-        getSupportActionBar().setTitle(title);
-    }
+
+
+//    private void setActionBarTitle(String title){
+//        getSupportActionBar().setTitle(title);
+//    }
 }

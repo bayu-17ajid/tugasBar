@@ -20,17 +20,7 @@
             app:layout_constraintTop_toTopOf="parent"
             tools:srcCompat="@tools:sample/avatars" />
 
-        <ImageView
-            android:id="@+id/imageView"
-            android:layout_width="72dp"
-            android:layout_height="56dp"
-            android:layout_marginStart="1dp"
-            android:layout_marginLeft="1dp"
-            android:onClick="btnBack"
-            android:src="@drawable/ic_baseline_arrow_back_24"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:tint="@color/colorWhite" />
+
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"

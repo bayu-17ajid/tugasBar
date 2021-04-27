@@ -5,8 +5,11 @@ import android.os.Parcelable;
 
 public class Hero implements Parcelable {
 
+    private String name, detail, genre;
+    private int photo;
     public Hero() {
     }
+
 
     protected Hero(Parcel in) {
         name = in.readString();
@@ -59,8 +62,7 @@ public class Hero implements Parcelable {
         this.photo = photo;
     }
 
-    private String name, detail, genre;
-    private int photo;
+
 
 
     @Override
