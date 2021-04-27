@@ -26,26 +26,26 @@ public class Detail extends AppCompatActivity {
         photo = findViewById(R.id.photo);
 
 
-//        Hero heroan = getIntent().getParcelableExtra("hero_data");
+        Hero heroan = getIntent().getParcelableExtra("hero_data");
+
+
+        tvJudul.setText(heroan.getName());
+        tvDescription.setText(heroan.getDetail());
+        tvGenre.setText(heroan.getGenre());
+        photo.setImageResource(heroan.getPhoto());
 //
+//        String nama = getIntent().getStringExtra("name");
+//        String detail = getIntent().getStringExtra("detail");
+//        String genre = getIntent().getStringExtra("genre");
+//        int foto = getIntent().getIntExtra("photo", 0);
 //
-//        tvJudul.setText(heroan.getName());
-//        tvDescription.setText(heroan.getDetail());
-//        tvGenre.setText(heroan.getGenre());
-//        photo.setImageResource(heroan.getPhoto());
-
-        String nama = getIntent().getStringExtra("name");
-        String detail = getIntent().getStringExtra("detail");
-        String genre = getIntent().getStringExtra("genre");
-        int foto = getIntent().getIntExtra("photo", 0);
-
-        tvJudul.setText(nama);
-        tvGenre.setText(genre);
-        tvDescription.setText(detail);
-        photo.setImageResource(foto);
+//        tvJudul.setText(nama);
+//        tvGenre.setText(genre);
+//        tvDescription.setText(detail);
+//        photo.setImageResource(foto);
 
 
-        setActionBarTitle(nama);
+        setActionBarTitle(heroan.getName());
 
 
     }

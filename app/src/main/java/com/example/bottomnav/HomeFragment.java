@@ -41,10 +41,10 @@ public class HomeFragment extends Fragment {
             public void onItemClicked(Hero data) {
                 Intent intent = new Intent(getActivity(), Detail.class);
                 intent.putExtra("hero_data", data);
-                intent.putExtra("name", data.getName());
-                intent.putExtra("genre", data.getGenre());
-                intent.putExtra("detail", data.getDetail());
-                intent.putExtra("photo", data.getPhoto());
+//                intent.putExtra("name", data.getName());
+//                intent.putExtra("genre", data.getGenre());
+//                intent.putExtra("detail", data.getDetail());
+//                intent.putExtra("photo", data.getPhoto());
                 startActivity(intent);
             }
         });
